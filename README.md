@@ -95,3 +95,47 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+
+📱 Building APK & IPA for Release
+Android (APK)
+1. Go to android folder:
+```sh
+cd android
+```
+2. Generate release APK:
+  ```sh
+./gradlew assembleRelease
+  ```
+3. The generated APK will be located at:
+   ```swift
+   android/app/build/outputs/apk/release/app-release.apk
+   ```
+4. Transfer the APK to your phone and install it.
+
+iOS (IPA)
+1. Open the iOS project in Xcode:
+   ```arduino
+   open ios/YourProjectName.xcworkspace
+   ```
+
+2. In Xcode:
+
+ - Select your project in the navigator
+
+ - Set the Build Configuration to Release
+
+ - Select your target device or "Any iOS Device"
+
+ - Go to Product > Archive
+
+3. Once the archive is created:
+
+ - Open the Organizer window
+
+ - Select Distribute App
+
+ - Choose Ad Hoc or App Store (depending on your purpose)
+
+ - Export the .ipa file
+
